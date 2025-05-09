@@ -1,0 +1,40 @@
+diff -up command-not-found-1.3/command-not-found.py.omv~ command-not-found-1.3/command-not-found.py
+--- command-not-found-1.3/command-not-found.py.omv~	2024-02-14 23:29:55.661390747 +0100
++++ command-not-found-1.3/command-not-found.py	2024-02-14 23:31:01.770067990 +0100
+@@ -9,14 +9,13 @@
+ import sys
+ 
+ import codecs
+-try:
+-    outf = codecs.getwriter(sys.stdout.encoding)(sys.stdout, errors='replace')
+-    sys.stdout = outf
+-except:
+-    print("WARNING: Output redirection is detected, I will not be able to ask you questions", file=sys.stderr)
+ 
+-if sys.stdout.encoding:
+-    sys.argv = [x.decode(sys.stdout.encoding) for x in sys.argv]
++import gettext
++
++gettext.bindtextdomain('command-not-found')
++gettext.textdomain('command-not-found')
++
++_ = gettext.gettext
+ 
+ if not sys.stderr.isatty():
+     print(_("%s: command not found") % sys.argv[1], file=sys.stderr)
+@@ -27,15 +26,6 @@ import json
+ import argparse
+ import os
+ 
+-import gettext
+-
+-gettext.bindtextdomain('command-not-found')
+-gettext.textdomain('command-not-found')
+-
+-def _(text):
+-    output = gettext.gettext(text)
+-    return output.decode('UTF-8')
+-
+ def get_installed_pkgs():
+     '''Returns a list of installed packages names'''
+     # we don't do it at the top of file because it takes too much time (0.1 sec).

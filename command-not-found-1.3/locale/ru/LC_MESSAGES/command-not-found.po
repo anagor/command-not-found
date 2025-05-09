@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-18 16:10+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Anton Kirilenko <anton.kirilenko@rosalab.ru>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: command-not-found.py:12 command-not-found.py:125
+#, python-format
+msgid "%s: command not found"
+msgstr "%s: команда не найдена"
+
+#: command-not-found.py:44
+msgid " Search for commands in repository. Remember: a normal program exit code is 127!"
+msgstr "Поиск комманд в репозитории. Нормальный код завершения программы всегда 127!"
+
+#. translating this string, do not care anout spaces or new lines, it will be autoformatted by argparse
+#: command-not-found.py:46
+msgid ""
+"In case of single possibile package, containing the given command,\n"
+"            cnf will suggest you a command to install it and will ask you whether you want to do it right now\n"
+"            (with question and y/N options). If you do not want cnf to ask user anything - \n"
+"            set COMMAND_NOT_FOUND_TURN_OFF_INSTALL_PROMPT environment variable to 1."
+msgstr "В случае если запрашиваемая команда встречается только в одном пакете, cnf напечатет команду для установки этого пакета.Так же будет предложено выполнить эту команду прямо сейчас. Если нужно чтобы cnf не задавал этот вопрос - установите переменную окружения COMMAND_NOT_FOUND_TURN_OFF_INSTALL_PROMPT = 1"
+
+#: command-not-found.py:50
+msgid "Command to search for."
+msgstr "Команда для поиска"
+
+#: command-not-found.py:87
+#, python-format
+msgid " Command '%s' can be found in:"
+msgstr " Команда '%s' найдена в:"
+
+#. mark that the package is already installed. Looks like e. g. (main, installed)
+#: command-not-found.py:92
+msgid ", installed"
+msgstr ", установлен"
+
+#: command-not-found.py:95 command-not-found.py:130
+msgid "package"
+msgstr "пакет"
+
+#: command-not-found.py:102
+#, python-format
+msgid "File %s exists! Check your PATH variable, or call it using an absolute path."
+msgstr "Файл %s существует! Проверьте переменную окружения PATH или вызывайте команду, используя абсолютный путь."
+
+#: command-not-found.py:106
+msgid " You can install it by typing:"
+msgstr " Вы можете установить его, выполнив:"
+
+#: command-not-found.py:109
+msgid "Do you want to install it? (y/N)"
+msgstr "Хотите сделать это сейчас? (д/Н)"
+
+#. any not 'y' string rejects the installation
+#: command-not-found.py:113
+msgid "y"
+msgstr "д"
+
+#: command-not-found.py:127
+#, python-format
+msgid " No command '%s' found, did you mean:"
+msgstr "Команда %s не найдена. Возможно, имелось в виду:"
+
+#: command-not-found.py:131
+#, python-format
+msgid "  Command '%(cmd)s' from %(locations)s"
+msgstr "  Команда '%(cmd)s' из пакета %(locations)s"

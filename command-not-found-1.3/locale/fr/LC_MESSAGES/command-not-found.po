@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-18 16:10+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Anton Kirilenko <anton.kirilenko@rosalab.ru>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: command-not-found.py:12 command-not-found.py:125
+#, python-format
+msgid "%s: command not found"
+msgstr "%s : commande introuvable"
+
+#: command-not-found.py:44
+msgid " Search for commands in repository. Remember: a normal program exit code is 127!"
+msgstr " Rechercher des commandes dans le dépôt. Pour rappel : 127 est un code de sortie de programme normal !"
+
+#. translating this string, do not care anout spaces or new lines, it will be autoformatted by argparse
+#: command-not-found.py:46
+msgid ""
+"In case of single possibile package, containing the given command,\n"
+"            cnf will suggest you a command to install it and will ask you whether you want to do it right now\n"
+"            (with question and y/N options). If you do not want cnf to ask user anything - \n"
+"            set COMMAND_NOT_FOUND_TURN_OFF_INSTALL_PROMPT environment variable to 1."
+msgstr ""
+"Dans le cas d'une proposition unique de paquet contenant la commande donnée,\n"
+"            cnf vous affichera une proposition de commande pour l'installer et vous demandera si vous souhaitez le faire immédiatement\n"
+"            (la question est suivie des options et o/N). Si vous ne voulez pas que cnf propose quoi que ce soit à l'utilisateur -\n"
+"            mettez la variable d'environnement COMMAND_NOT_FOUND_TURN_OFF_INSTALL_PROMPT à 1."
+
+#: command-not-found.py:50
+msgid "Command to search for."
+msgstr "Commande à rechercher."
+
+#: command-not-found.py:87
+#, python-format
+msgid " Command '%s' can be found in:"
+msgstr " La commande '%s' peut être trouvée dans :"
+
+#. mark that the package is already installed. Looks like e. g. (main, installed)
+#: command-not-found.py:92
+msgid ", installed"
+msgstr ", installé"
+
+#: command-not-found.py:95 command-not-found.py:130
+msgid "package"
+msgstr "paquet"
+
+#: command-not-found.py:102
+#, python-format
+msgid "File %s exists! Check your PATH variable, or call it using an absolute path."
+msgstr "Le fichier %s existe! Vérifiez votre variable PATH, ou exécutez-le en utilisant un chemin absolu."
+
+#: command-not-found.py:106
+msgid " You can install it by typing:"
+msgstr " Vous pouvez l'installer en tapant :"
+
+#: command-not-found.py:109
+msgid "Do you want to install it? (y/N)"
+msgstr "Voulez-vous l'installer ? (o/N)"
+
+#. any not 'y' string rejects the installation
+#: command-not-found.py:113
+msgid "y"
+msgstr "o"
+
+#: command-not-found.py:127
+#, python-format
+msgid " No command '%s' found, did you mean:"
+msgstr " Commande '%s' introuvable, voulez-vous :"
+
+#: command-not-found.py:131
+#, python-format
+msgid "  Command '%(cmd)s' from %(locations)s"
+msgstr "  La commande '%(cmd)s' du %(locations)s"
